@@ -3,11 +3,56 @@
 
 body {
 	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', 'sans-serif';
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 300;
-	background-image: url('../img/background.jpg');
-	background-size: 100% 100%;
-	background-attachment: fixed;	
+}
+
+@media screen and (min-width: 992px) {
+	body {
+		font-size: 18px; 
+		background-image: url('../img/background.jpg');
+		background-size: 100% 100%;
+		background-attachment: fixed;
+	}
+
+	header {
+		position: relative;
+	}
+
+	.container-fluid {
+		margin-left: 30%;
+		margin-top: 20px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+
+	header p {
+		display: inline;
+	}
+
+	nav {
+		position: absolute;
+		top: 10px;
+		right: 10px; 
+	}
+}
+
+.container-fluid {
+	margin-top: 0;
+	margin-bottom: 0;
+	opacity: 0.9;
+	padding: 0em 0em 0em 0em;
+}
+
+nav ul {
+	padding: 0em 0em 0em 0em;
+	margin: 0 0 0 0;
+}
+
+nav li {
+	list-style-type: none;
+	display: inline-block;
+	margin-right: 1em;
 }
 
 h1, h2, h3 {
@@ -34,10 +79,6 @@ h3 {
 }
 
 main {
-	margin-left: 30%;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	margin-right: 20px;
 	background-image: url('../img/ricepaper_v3.png');
 	opacity: 0.9;
 }
@@ -45,59 +86,69 @@ main {
 header {
 	color: #FFFFFF;
 	background-color: #FA5A0F;
-	border-bottom: 5px #EA4A00;
-	padding: 1em;
+	border-bottom: 5px solid #EA4A00;
+	padding: 1em 1em 1em 1em;
 }
 
 header p {
 	font-size: 120%;
 	color: #EEEEEE;
 	margin: 0 0 0 0;
+	display: none;
 }
 
 .restaurant-info {
-	padding: 1em;
+	padding: 1em 1em 1em 1em;
 }
 
 
 .menu {
-	padding: 1em;
+	padding: 1em 0em 1em 0em;
 	background-color: rgba(207, 205, 140, 0.5);
 	background-opacity: 0.5;
+	margin-left: 0;
+	margin-right: 0;
 }
 
-dt {
+.menu dt {
 	font-weight: 400;
+	padding-left: 0.5em;
 }
 
-dd {
+.menu dd {
 	font-size: 80%;
 	font-style: italic;
 	margin-left: 1em;
 	margin-bottom: 1em;
 }
 
-.about-us {
-	padding: 1em;
+.menu h2, h3 {
+	padding-left: .5em;
 }
 
-a:link, a:visited {
+.about-us {
+	padding: 1em 1em 1em 1em;
+}
+
+nav a:link, nav a:visited {
 	color: #0000AA;
 	text-decoration: none;
 }
 
-a:hover {
-	color: #0000EE;
-}
-
-input:focus {
+nav a:hover, nav a:focus {
 	color: #0000EE;
 }
 
 footer {
-	padding: 1em;
+	padding: 1em 1em 1em 1em;
 	background-color: #FC892F;
 	border-top: 5px #EC791F;
+	border-top-width: 5px;
+	border-top-style: solid;
 	font-size: 80%;
 	text-align: right;
+}
+
+footer #mail {
+	font-style: italic;
 }
